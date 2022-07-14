@@ -9,7 +9,11 @@ import UIKit
 
 class AuthorTableViewCell: UITableViewCell {
 
-    @IBOutlet var name: UILabel!
+    @IBOutlet var name: UILabel! = {
+        let label = UILabel()
+        label.text = "Hello".localized()
+        return label
+    }()
     //static for shared properties and methods
     static let cellIdentifier = "AuthorTableViewCell"
 
@@ -26,3 +30,10 @@ class AuthorTableViewCell: UITableViewCell {
         name.text = viewModel.name
     }
 }
+
+extension String {
+    func localized() -> String{
+        return NSLocalizedString(self, tableName: "Localized", bundle: .main, value: self, comment: self)
+    }
+}
+

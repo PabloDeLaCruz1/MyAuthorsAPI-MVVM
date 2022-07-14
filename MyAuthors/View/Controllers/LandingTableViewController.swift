@@ -66,6 +66,5 @@ class LandingTableViewController: UITableViewController {
             showBooksViewController.authorName = authorName
         }
     }
-
-
 }
+

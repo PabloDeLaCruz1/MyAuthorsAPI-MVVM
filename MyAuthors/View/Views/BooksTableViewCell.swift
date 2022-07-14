@@ -9,9 +9,9 @@ import UIKit
 
 class BooksTableViewCell: UITableViewCell {
 
-    @IBOutlet var name: UILabel!
-    @IBOutlet var pages: UILabel!
-    @IBOutlet var release: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var pages: UILabel!
+    @IBOutlet weak var release: UILabel!
 //    @IBOutlet var coverImage: UIImageView!
 
     static let cellIdentifier = "BooksTableViewCell"
