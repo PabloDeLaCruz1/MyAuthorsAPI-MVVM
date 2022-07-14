@@ -17,7 +17,7 @@ struct DataAPI {
 
         URLSession.shared.dataTask(with: apiUrl) { data, response, error in
             guard let data = data else {
-                print(error?.localizedDescription)
+//                print(error?.localizedDescription)
                 return
             }
             do {

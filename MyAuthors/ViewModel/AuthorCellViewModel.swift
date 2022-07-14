@@ -7,8 +7,8 @@
 
 import Foundation
 
-
+//We use a view model to prevent the need for future changes to our view model, if the Author model has changes that dont relate to our view.
+//For example, if the author publishes another book, for our landing view, we do not need to worry about this.
 struct AuthorCellViewModel {
-    let id: Int
     let name: String
 }

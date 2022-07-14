@@ -9,15 +9,27 @@ import UIKit
 
 class BooksTableViewCell: UITableViewCell {
 
+    @IBOutlet var name: UILabel!
+    @IBOutlet var pages: UILabel!
+    @IBOutlet var release: UILabel!
+//    @IBOutlet var coverImage: UIImageView!
+
+    static let cellIdentifier = "BooksTableViewCell"
+//
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    static func nib() -> UINib {
+        return UINib(nibName: "BooksTableViewCell", bundle: nil)
+    }
 
-        // Configure the view for the selected state
+    //MARK: configure
+    public func configure(with viewModel: BooksCellViewModel) {
+        name.text = viewModel.name
+        pages.text = String(viewModel.pages)
+        release.text = viewModel.release
+//        coverImage.image = viewModel.image
     }
 
 }

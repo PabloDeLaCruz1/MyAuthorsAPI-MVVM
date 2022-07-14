@@ -9,15 +9,20 @@ import UIKit
 
 class AuthorTableViewCell: UITableViewCell {
 
+    @IBOutlet var name: UILabel!
+    //static for shared properties and methods
+    static let cellIdentifier = "AuthorTableViewCell"
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    static func nib() -> UINib {
+        return UINib(nibName: "AuthorTableViewCell", bundle: nil)
     }
 
+    //MARK: configure
+    public func configure(with viewModel: AuthorCellViewModel) {
+        name.text = viewModel.name
+    }
 }

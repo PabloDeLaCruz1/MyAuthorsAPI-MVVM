@@ -19,6 +19,9 @@
 		FEF22172287F4374008C5D17 /* AuthorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF22171287F4374008C5D17 /* AuthorTableViewCell.swift */; };
 		FEF22174287F5046008C5D17 /* BooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF22173287F5046008C5D17 /* BooksTableViewController.swift */; };
 		FEF22176287F5608008C5D17 /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF22175287F5608008C5D17 /* BooksTableViewCell.swift */; };
+		FEF2217C2880141F008C5D17 /* AuthorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF2217B2880141F008C5D17 /* AuthorTableViewCell.xib */; };
+		FEF2217E28801905008C5D17 /* BooksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF2217D28801905008C5D17 /* BooksTableViewCell.xib */; };
+		FEF2218028801AC4008C5D17 /* BooksCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF2217F28801AC4008C5D17 /* BooksCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		FEF22171287F4374008C5D17 /* AuthorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTableViewCell.swift; sourceTree = "<group>"; };
 		FEF22173287F5046008C5D17 /* BooksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewController.swift; sourceTree = "<group>"; };
 		FEF22175287F5608008C5D17 /* BooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
+		FEF2217B2880141F008C5D17 /* AuthorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorTableViewCell.xib; sourceTree = "<group>"; };
+		FEF2217D28801905008C5D17 /* BooksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksTableViewCell.xib; sourceTree = "<group>"; };
+		FEF2217F28801AC4008C5D17 /* BooksCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				FEF22168287F0ED8008C5D17 /* AuthorCellViewModel.swift */,
+				FEF2217F28801AC4008C5D17 /* BooksCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -137,6 +144,8 @@
 				FEF22154287EF2DF008C5D17 /* Main.storyboard */,
 				FEF22171287F4374008C5D17 /* AuthorTableViewCell.swift */,
 				FEF22175287F5608008C5D17 /* BooksTableViewCell.swift */,
+				FEF2217B2880141F008C5D17 /* AuthorTableViewCell.xib */,
+				FEF2217D28801905008C5D17 /* BooksTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,7 +210,9 @@
 			files = (
 				FEF2215B287EF2E1008C5D17 /* LaunchScreen.storyboard in Resources */,
 				FEF22158287EF2E1008C5D17 /* Assets.xcassets in Resources */,
+				FEF2217C2880141F008C5D17 /* AuthorTableViewCell.xib in Resources */,
 				FEF22156287EF2DF008C5D17 /* Main.storyboard in Resources */,
+				FEF2217E28801905008C5D17 /* BooksTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +226,7 @@
 				FEF22176287F5608008C5D17 /* BooksTableViewCell.swift in Sources */,
 				FEF2214F287EF2DF008C5D17 /* AppDelegate.swift in Sources */,
 				FEF22172287F4374008C5D17 /* AuthorTableViewCell.swift in Sources */,
+				FEF2218028801AC4008C5D17 /* BooksCellViewModel.swift in Sources */,
 				FEF22170287F41DB008C5D17 /* LandingTableViewController.swift in Sources */,
 				FEF22167287F0991008C5D17 /* Author.swift in Sources */,
 				FEF22174287F5046008C5D17 /* BooksTableViewController.swift in Sources */,

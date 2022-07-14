@@ -15,7 +15,7 @@ class LandingTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(AuthorTableViewCell.self, forCellReuseIdentifier: "authorCell")
+        tableView.register(AuthorTableViewCell.nib(), forCellReuseIdentifier: AuthorTableViewCell.cellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -29,7 +29,7 @@ class LandingTableViewController: UITableViewController {
             }
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "List of Authors"
     }
@@ -40,10 +40,11 @@ class LandingTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "authorCell", for: indexPath)
-        cell.textLabel?.text = String(authors[indexPath.row].authorID ?? 99)
-        cell.textLabel?.text = authors[indexPath.row].authorName
-
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: AuthorTableViewCell.cellIdentifier, for: indexPath) as! AuthorTableViewCell
+        let model = authors[indexPath.row]
+        cell.configure(with: AuthorCellViewModel(name: model.authorName))
+        
         return cell
     }
 

@@ -11,12 +11,16 @@ class BooksTableViewController: UITableViewController {
 
     var books: [Book] = []
     var authorName: String = ""
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(BooksTableViewCell.self, forCellReuseIdentifier: "booksCell")
+//        tableView.register(BooksTableViewCell.self, forCellReuseIdentifier: "BooksTableViewCell")
+//        tableView.register(UINib(nibName: "BooksTableViewCell", bundle: nil), forCellReuseIdentifier: "BooksTableViewCell")
+//        tableView.register(UINib?, forCellReuseIdentifier: "BooksTableViewCell")
+        tableView.register(BooksTableViewCell.nib(), forCellReuseIdentifier: BooksTableViewCell.cellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
+
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -27,11 +31,19 @@ class BooksTableViewController: UITableViewController {
 
         return books.count
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "booksCell", for: indexPath)
-        cell.textLabel?.text = books[indexPath.row].title
+        print("Hello1----------------")
+        let cell = tableView.dequeueReusableCell(withIdentifier: BooksTableViewCell.cellIdentifier, for: indexPath) as! BooksTableViewCell
+        print("Hello4----------------")
 
+        let model = books[indexPath.row]
+
+        cell.configure(with: BooksCellViewModel(name: model.title, pages: model.pages, release: model.releaseDate))
+        
         return cell
     }
 }
