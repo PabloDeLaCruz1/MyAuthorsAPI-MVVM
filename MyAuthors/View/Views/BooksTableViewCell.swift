@@ -26,11 +26,16 @@ class BooksTableViewCell: UITableViewCell {
 
     //MARK: configure
     public func configure(with viewModel: BooksCellViewModel) {
-        guard let url = URL(string: viewModel.image!) else { return } 
-        coverImage.downloaded(from: url)
         title.text = viewModel.name
         pages.text = String(viewModel.pages)
         releaseDate.text = viewModel.releaseDate
+        if viewModel.image == "" {
+            let url = URL(string: "https://via.placeholder.com/150")
+            coverImage.downloaded(from: url!)
+        }else{
+            let url = URL(string: viewModel.image!)
+            coverImage.downloaded(from: url!)
+        }
     }
 
 }
