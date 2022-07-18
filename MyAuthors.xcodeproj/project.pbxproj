@@ -26,11 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FE4B60E028807F5F0046CAA7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
-		FE4B60E128807F5F0046CAA7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FE4B60E528807FCE0046CAA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		FE4B60E728807FD60046CAA7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FE4B60EE2885A3600046CAA7 /* BooksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksTableViewCell.xib; sourceTree = "<group>"; };
+		FE4B60F02885D0840046CAA7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		FE4B60F12885D0840046CAA7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FEF2214B287EF2DF008C5D17 /* MyAuthors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAuthors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF2214E287EF2DF008C5D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEF22150287EF2DF008C5D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -243,7 +242,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				FE4B60E528807FCE0046CAA7 /* en */,
-				FE4B60E728807FD60046CAA7 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -252,7 +250,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FEF22155287EF2DF008C5D17 /* Base */,
-				FE4B60E028807F5F0046CAA7 /* es */,
+				FE4B60F02885D0840046CAA7 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -261,7 +259,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FEF2215A287EF2E1008C5D17 /* Base */,
-				FE4B60E128807F5F0046CAA7 /* es */,
+				FE4B60F12885D0840046CAA7 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

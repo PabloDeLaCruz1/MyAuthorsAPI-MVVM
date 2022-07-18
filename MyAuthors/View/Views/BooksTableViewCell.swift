@@ -13,7 +13,17 @@ class BooksTableViewCell: UITableViewCell {
     @IBOutlet weak var pages: UILabel!
     @IBOutlet weak var releaseDate: UILabel!
     @IBOutlet weak var coverImage: UIImageView!
+    @IBOutlet weak var pagesLb: UILabel! = {
+        let label = UILabel()
+        label.text = "Pagess".localized()
+        return label
+    }()
     
+    @IBOutlet weak var releaseLb: UILabel! = {
+        let label = UILabel()
+        label.text = "Release".localized()
+        return label
+    }()
     static let cellIdentifier = "BooksTableViewCell"
 //
     override func awakeFromNib() {
@@ -26,6 +36,7 @@ class BooksTableViewCell: UITableViewCell {
 
     //MARK: configure
     public func configure(with viewModel: BooksCellViewModel) {
+        pagesLb.text = self.pagesLb.text
         title.text = viewModel.name
         pages.text = String(viewModel.pages)
         releaseDate.text = viewModel.releaseDate
@@ -40,6 +51,7 @@ class BooksTableViewCell: UITableViewCell {
 
 }
 
+//Handles downloading images from a string as url
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
         contentMode = mode

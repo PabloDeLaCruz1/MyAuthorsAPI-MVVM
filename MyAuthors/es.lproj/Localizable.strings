@@ -6,8 +6,8 @@
   
 */
 
-"Name" = "Nombre";
+"Name:" = "Nombre:";
 
 "Pages" = "Paginas";
 
-"Release" = "Rel";
+"Release:" = "Lanzamiento:";

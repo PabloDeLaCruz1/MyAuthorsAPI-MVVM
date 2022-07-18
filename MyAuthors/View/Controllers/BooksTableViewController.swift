@@ -19,7 +19,7 @@ class BooksTableViewController: UITableViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
-
+        
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -42,6 +42,10 @@ class BooksTableViewController: UITableViewController {
 
         let model = books[indexPath.row]
         cell.configure(with: BooksCellViewModel(image: model.coverImage, name: model.title, pages: model.pages, releaseDate: model.releaseDate))
+
+
+        cell.pagesLb.text = "Pages:".localized()
+        cell.releaseLb.text = "Release:".localized()
 
         return cell
     }

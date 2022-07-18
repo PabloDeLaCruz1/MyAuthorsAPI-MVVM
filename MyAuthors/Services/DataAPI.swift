@@ -23,6 +23,7 @@ struct DataAPI {
             do {
                 let result = try JSONDecoder().decode([Author].self, from: data)
                 
+                //Rows of the author list should be sorted by name
                 //Pass sorted results to completion handler:
                 comp(result.sorted { $0.authorName < $1.authorName })
             } catch {
