@@ -7,9 +7,15 @@
 
 import Foundation
 
+
+
+
+
 struct BooksCellViewModel {
 //    let image: String
     let name: String
     let pages: Int
-    let release: String 
+//    let release: String
+    let releaseDate: String
+    
 }

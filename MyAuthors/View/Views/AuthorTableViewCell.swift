@@ -9,7 +9,7 @@ import UIKit
 
 class AuthorTableViewCell: UITableViewCell {
 
-    @IBOutlet var name: UILabel! = {
+    @IBOutlet weak var name: UILabel! = {
         let label = UILabel()
         label.text = "Hello".localized()
         return label

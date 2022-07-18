@@ -23,6 +23,7 @@ class LandingTableViewController: UITableViewController {
             data in
             self.authors = data
 
+            print(data)
             //Reload UI on Main thread:
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -42,6 +43,7 @@ class LandingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: AuthorTableViewCell.cellIdentifier, for: indexPath) as! AuthorTableViewCell
+        
         let model = authors[indexPath.row]
         cell.configure(with: AuthorCellViewModel(name: model.authorName))
         
@@ -60,11 +62,13 @@ class LandingTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
 
+     
         if (segue.identifier == "Show Books") {
             let showBooksViewController: BooksTableViewController = segue.destination as! BooksTableViewController
             showBooksViewController.books = books
             showBooksViewController.authorName = authorName
         }
+        
     }
 }
 
