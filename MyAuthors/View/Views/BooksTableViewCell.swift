@@ -13,19 +13,11 @@ class BooksTableViewCell: UITableViewCell {
     @IBOutlet weak var pages: UILabel!
     @IBOutlet weak var releaseDate: UILabel!
     @IBOutlet weak var coverImage: UIImageView!
-    @IBOutlet weak var pagesLb: UILabel! = {
-        let label = UILabel()
-        label.text = "Pagess".localized()
-        return label
-    }()
-    
-    @IBOutlet weak var releaseLb: UILabel! = {
-        let label = UILabel()
-        label.text = "Release".localized()
-        return label
-    }()
+    @IBOutlet weak var pagesLb: UILabel!
+    @IBOutlet weak var releaseLb: UILabel!
+
     static let cellIdentifier = "BooksTableViewCell"
-//
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -43,7 +35,7 @@ class BooksTableViewCell: UITableViewCell {
         if viewModel.image == "" {
             let url = URL(string: "https://via.placeholder.com/150")
             coverImage.downloaded(from: url!)
-        }else{
+        } else {
             let url = URL(string: viewModel.image!)
             coverImage.downloaded(from: url!)
         }

@@ -9,7 +9,7 @@ import UIKit
 
 class AuthorTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var name: UILabel! 
+    @IBOutlet weak var name: UILabel!
     //static for shared properties and methods
     static let cellIdentifier = "AuthorTableViewCell"
 
@@ -21,7 +21,7 @@ class AuthorTableViewCell: UITableViewCell {
         return UINib(nibName: "AuthorTableViewCell", bundle: nil)
     }
 
-    //MARK: configure
+//MARK: configure
     public func configure(with viewModel: AuthorCellViewModel) {
         name.text = viewModel.name
     }
@@ -29,10 +29,10 @@ class AuthorTableViewCell: UITableViewCell {
 
 //Handle languages using localization
 extension String {
-    func localized() -> String{
+    func localized() -> String {
         return NSLocalizedString(
             self,
-            tableName: "Localizable",
+            tableName: "Main",
             bundle: .main,
             value: self,
             comment: self)

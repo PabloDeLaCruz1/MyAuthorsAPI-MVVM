@@ -19,18 +19,18 @@ class LandingTableViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
+        //Using our api data object to initialize our data object
         parser.getData {
             data in
             self.authors = data
 
-            print(data)
             //Reload UI on Main thread:
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
     }
-    
+
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "List of Authors"
     }
@@ -41,12 +41,12 @@ class LandingTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         let cell = tableView.dequeueReusableCell(withIdentifier: AuthorTableViewCell.cellIdentifier, for: indexPath) as! AuthorTableViewCell
-        
+
         let model = authors[indexPath.row]
         cell.configure(with: AuthorCellViewModel(name: model.authorName))
-        
+
         return cell
     }
 
@@ -56,19 +56,18 @@ class LandingTableViewController: UITableViewController {
         authorName = authors[indexPath.row].authorName
         performSegue(withIdentifier: "Show Books", sender: nil)
     }
-    
+
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
 
-     
         if (segue.identifier == "Show Books") {
             let showBooksViewController: BooksTableViewController = segue.destination as! BooksTableViewController
             showBooksViewController.books = books
             showBooksViewController.authorName = authorName
         }
-        
+
     }
 }
 

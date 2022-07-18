@@ -7,35 +7,37 @@
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuthorTableViewCell" id="XjO-lJ-ji4" customClass="AuthorTableViewCell" customModule="MyAuthors" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-            <autoresizingMask key="autoresizingMask"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuthorTableViewCell" rowHeight="50" id="XjO-lJ-ji4" customClass="AuthorTableViewCell" customModule="MyAuthors" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XjO-lJ-ji4" id="NDr-3I-K8F">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="391" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXE-fY-x0k">
-                        <rect key="frame" x="15" y="15" width="384" height="14"/>
+                        <rect key="frame" x="16" y="16" width="41.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tye-r0-kAR">
-                        <rect key="frame" x="355" y="9" width="27" height="28"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tye-r0-kAR">
+                        <rect key="frame" x="362.5" y="18" width="12.5" height="14.5"/>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="HXE-fY-x0k" secondAttribute="bottom" constant="15" id="QMa-GM-dHY"/>
-                    <constraint firstItem="HXE-fY-x0k" firstAttribute="leading" secondItem="NDr-3I-K8F" secondAttribute="leading" constant="15" id="Xqv-Qc-cUM"/>
-                    <constraint firstAttribute="trailing" secondItem="HXE-fY-x0k" secondAttribute="trailing" constant="15" id="YgP-bl-D8S"/>
-                    <constraint firstItem="HXE-fY-x0k" firstAttribute="top" secondItem="NDr-3I-K8F" secondAttribute="top" constant="15" id="zBo-6W-sG1"/>
+                    <constraint firstAttribute="trailing" secondItem="Tye-r0-kAR" secondAttribute="trailing" constant="16" id="Blk-f7-Sxf"/>
+                    <constraint firstAttribute="bottom" secondItem="HXE-fY-x0k" secondAttribute="bottom" constant="16" id="Y0Z-KZ-cgT"/>
+                    <constraint firstAttribute="bottom" secondItem="Tye-r0-kAR" secondAttribute="bottom" constant="16" id="jET-pn-dXB"/>
+                    <constraint firstItem="HXE-fY-x0k" firstAttribute="top" secondItem="NDr-3I-K8F" secondAttribute="top" constant="16" id="r8u-sd-KeZ"/>
+                    <constraint firstItem="Tye-r0-kAR" firstAttribute="top" secondItem="NDr-3I-K8F" secondAttribute="top" constant="16" id="vbK-cn-Kcf"/>
+                    <constraint firstItem="HXE-fY-x0k" firstAttribute="leading" secondItem="NDr-3I-K8F" secondAttribute="leading" constant="16" id="vxy-cx-1o8"/>
                 </constraints>
             </tableViewCellContentView>
+            <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
             <connections>
                 <outlet property="name" destination="HXE-fY-x0k" id="7AN-db-uVJ"/>
             </connections>
-            <point key="canvasLocation" x="-117.39130434782609" y="-80.357142857142847"/>
+            <point key="canvasLocation" x="-132.60869565217394" y="-78.348214285714278"/>
         </tableViewCell>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
     </objects>

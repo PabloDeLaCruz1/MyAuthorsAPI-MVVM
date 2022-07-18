@@ -19,7 +19,7 @@ class BooksTableViewController: UITableViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
-        
+
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -32,17 +32,16 @@ class BooksTableViewController: UITableViewController {
         return books.count
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 88
+        return 95
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BooksTableViewCell.cellIdentifier, for: indexPath) as? BooksTableViewCell else {
             fatalError("failed on \(indexPath)") }
 
         let model = books[indexPath.row]
         cell.configure(with: BooksCellViewModel(image: model.coverImage, name: model.title, pages: model.pages, releaseDate: model.releaseDate))
-
 
         cell.pagesLb.text = "Pages:".localized()
         cell.releaseLb.text = "Release:".localized()
