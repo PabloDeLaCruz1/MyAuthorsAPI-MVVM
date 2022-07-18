@@ -6,16 +6,13 @@
 //
 
 import Foundation
-
-
-
-
+import UIKit
 
 struct BooksCellViewModel {
-//    let image: String
+    let image: String?
     let name: String
     let pages: Int
-//    let release: String
     let releaseDate: String
-    
 }
+
+

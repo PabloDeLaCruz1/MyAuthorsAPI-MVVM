@@ -41,7 +41,7 @@ class BooksTableViewController: UITableViewController {
             fatalError("failed on \(indexPath)") }
 
         let model = books[indexPath.row]
-        cell.configure(with: BooksCellViewModel(name: model.title, pages: model.pages, releaseDate: model.releaseDate))
+        cell.configure(with: BooksCellViewModel(image: model.coverImage, name: model.title, pages: model.pages, releaseDate: model.releaseDate))
 
         return cell
     }
