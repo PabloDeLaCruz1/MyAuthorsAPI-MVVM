@@ -57,7 +57,7 @@ class LandingTableViewController: UITableViewController {
         performSegue(withIdentifier: "Show Books", sender: nil)
     }
 
-    // MARK: - Navigation
+    // MARK: - Navigation, passing data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.

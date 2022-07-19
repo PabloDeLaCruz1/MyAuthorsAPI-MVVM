@@ -11,7 +11,7 @@ import Foundation
 struct DataAPI {
     //escaping to make the closure escape, since swift makes them nonescaping by default
     //because the closure passed as completion handler is executed once the request completes, which is some time after the data task is created. Meaning the closure will outlive the func scope.
-    //Async process,
+    //Async process, meaning it will run in the background thread
     func getData(comp: @escaping ([Author]) -> ()) {
         guard let apiUrl = URL(string: "https://mocki.io/v1/e860a172-2605-4afe-bcba-dfd071e8256e") else { return }
 

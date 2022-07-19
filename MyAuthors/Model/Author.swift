@@ -13,13 +13,11 @@ struct Author: Codable {
     let authorID: Int?
     let authorName: String
     let books: [Book]
-    let welcomeAuthorID: Int?
 
     //CodingKeys to handle exceptions for the case sensitive data attributes from JSON response
     enum CodingKeys: String, CodingKey {
         case authorID = "authorId"
         case authorName, books
-        case welcomeAuthorID = "author_id"
     }
 }
 

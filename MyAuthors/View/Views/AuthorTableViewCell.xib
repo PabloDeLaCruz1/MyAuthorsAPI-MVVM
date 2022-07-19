@@ -33,7 +33,6 @@
                     <constraint firstItem="HXE-fY-x0k" firstAttribute="leading" secondItem="NDr-3I-K8F" secondAttribute="leading" constant="16" id="vxy-cx-1o8"/>
                 </constraints>
             </tableViewCellContentView>
-            <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
             <connections>
                 <outlet property="name" destination="HXE-fY-x0k" id="7AN-db-uVJ"/>
             </connections>
